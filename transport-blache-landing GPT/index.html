@@ -16,7 +16,12 @@
 <body>
   <div class="topbar" role="banner" id="top">
     <div class="container topbar__inner">
-      <div class="topbar__left">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <img class="brand__truck" src="logo-truck.png" alt="" aria-hidden="true" />
+        <span class="brand__text">Transport <strong>Blache</strong></span>
+      </a>
+
+      <div class="topbar__actions">
         <a class="chip" href="tel:+33675666829" aria-label="Appeler Transport Blache">
           <span class="chip__icon" aria-hidden="true">☎</span>
           <span>06 75 66 68 29</span>
@@ -26,9 +31,7 @@
           <span class="chip__icon" aria-hidden="true">✉</span>
           <span>transportblache@gmail.com</span>
         </a>
-      </div>
 
-      <div class="topbar__right">
         <a class="chip chip--ghost" href="#contact" aria-label="Aller au devis">
           <span class="chip__icon" aria-hidden="true">↘</span>
           <span>Devis rapide</span>
@@ -41,16 +44,6 @@
       </div>
     </div>
   </div>
-
-  <header class="nav" id="nav">
-    <div class="container nav__inner">
-      <a class="brand" href="#top" aria-label="Retour en haut">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__text">Transport <strong>Blache</strong></span>
-      </a>
-      <a class="nav__cta" href="#contact">Contact</a>
-    </div>
-  </header>
 
   <main>
     <section class="hero">
@@ -65,14 +58,15 @@
             </p>
 
             <h1 class="title">
-              Des livraisons<br>
-              <span class="glow">rapides</span> et <span class="underline">fiables</span><br>
-              pour vos chantiers.
+              La logistique chantier<br>
+              <span class="glow">premium</span>, précise et <span class="underline">fiable</span><br>
+              pour vos opérations.
             </h1>
 
             <p class="lead">
-              Tous matériaux de construction, big bag, gravats, terre végétale, végétaux,
-              petits engins de TP… et pièces spécifiques sur demande.
+              Transport Blache accompagne les pros et les particuliers exigeants avec un niveau
+              d’exécution haut de gamme : ponctualité, sécurité, communication claire et adaptation
+              aux contraintes réelles du terrain.
             </p>
 
             <div class="hero__actions">
@@ -84,16 +78,16 @@
 
             <div class="hero__stats">
               <div class="stat">
-                <div class="stat__num">Rapide</div>
-                <div class="stat__label">créneaux selon dispo</div>
+                <div class="stat__num">Nouveau</div>
+                <div class="stat__label">service démarré récemment</div>
               </div>
               <div class="stat">
-                <div class="stat__num">Pro</div>
+                <div class="stat__num">Interventions</div>
                 <div class="stat__label">chantier & particuliers</div>
               </div>
               <div class="stat">
-                <div class="stat__num">Sur mesure</div>
-                <div class="stat__label">pièces spécifiques</div>
+                <div class="stat__num">Devis rapide</div>
+                <div class="stat__label">retour sous 24h</div>
               </div>
             </div>
           </div>
@@ -106,6 +100,8 @@
 
       <div class="hero__fade" aria-hidden="true"></div>
     </section>
+
+    <div class="sectionDivider" aria-hidden="true"></div>
 
     <section class="section section--services-luxe" id="services">
       <div class="servicesPremium">
@@ -120,7 +116,7 @@
 
             <div class="servicesSubtitleBar servicesSubtitleBar--center">
               <p class="sectionLead sectionLead--bar sectionLead--bar--nowrap">
-                Transport, enlèvement et levage : une réponse claire, sérieuse et visuellement assumée, pour les chantiers, les accès délicats et les besoins spécifiques.
+                Transport, enlèvement et levage : une réponse claire, premium et engagée, pour les chantiers, les accès délicats et les demandes sur mesure.
               </p>
             </div>
           </div>
@@ -141,7 +137,7 @@
               <div class="serviceCard__eyebrow">Prestation principale</div>
               <h3>Transport</h3>
               <p>
-                Tous matériaux de construction : carrelage, sable, mélange béton et besoins spécifiques.
+                Livraisons sécurisées de matériaux de construction, équipements et éléments sensibles, avec gestion des accès et des délais.
               </p>
             </div>
           </article>
@@ -160,7 +156,7 @@
               <div class="serviceCard__eyebrow">Gestion chantier</div>
               <h3>Big bag &amp; enlèvement</h3>
               <p>
-                Gravats, déblais, big bag… une intervention claire, rapide et adaptée à vos contraintes.
+                Évacuation de gravats, déblais et big bag avec une organisation propre, rapide et conforme aux impératifs de chantier.
               </p>
             </div>
           </article>
@@ -179,121 +175,91 @@
               <div class="serviceCard__eyebrow">Manutention précise</div>
               <h3>Levage</h3>
               <p>
-                Pour les éléments lourds, encombrants ou les opérations délicates.
+                Manutention précise des éléments lourds ou complexes : approche sécurisée, matériel adapté et pilotage rigoureux.
               </p>
             </div>
           </article>
         </div>
       </div>
     </section>
+
+    <div class="sectionDivider" aria-hidden="true"></div>
 
     <section class="section section--wide section--why" id="pourquoi">
       <div class="wideShell">
         <div class="wideHead reveal">
           <span class="sectionKicker">Pourquoi nous ?</span>
           <div class="wideHead__body">
-            <h2 class="h2 wideTitle wideTitle--center">Une approche simple, fiable et pensée pour le terrain.</h2>
+            <h2 class="h2 wideTitle wideTitle--center">Une promesse claire : bien faire, dès le premier chantier.</h2>
             <div class="sectionSubtitleBar sectionSubtitleBar--center">
               <p class="wideLead wideLead--bar">
-                Un service sérieux, réactif et clair, avec une vraie logique chantier : moins de friction, plus d’efficacité, et une exécution propre du début à la fin.
+                Même en démarrage, nous avons une exigence simple : préparation, soin d’exécution et communication honnête à chaque étape.
               </p>
             </div>
           </div>
         </div>
 
-        <div class="whyGrid">
-          <div class="whyPanel whyPanel--text reveal">
-            <div class="whyList">
-              <div class="whyItem">
-                <span class="whyItem__num">01</span>
-                <div>
-                  <h3>Réactivité</h3>
-                  <p>Des échanges rapides et une organisation pensée pour répondre efficacement aux besoins du terrain.</p>
-                </div>
-              </div>
+        <div class="whyPremiumGrid">
+          <article class="whyPremiumCard reveal">
+            <span class="whyPremiumCard__index">01</span>
+            <h3>Un seul interlocuteur</h3>
+            <p>Vous échangez directement avec la personne qui organise et réalise l’intervention. Résultat : moins d’erreurs, plus de clarté.</p>
+          </article>
 
-              <div class="whyItem">
-                <span class="whyItem__num">02</span>
-                <div>
-                  <h3>Fiabilité</h3>
-                  <p>Un service clair, ponctuel et maîtrisé, avec une attention particulière aux contraintes d’accès et de chantier.</p>
-                </div>
-              </div>
+          <article class="whyPremiumCard reveal">
+            <span class="whyPremiumCard__index">02</span>
+            <h3>Préparation avant action</h3>
+            <p>Adresse, accès, volume, contraintes : tout est cadré avant déplacement pour sécuriser le timing et limiter les imprévus.</p>
+          </article>
 
-              <div class="whyItem">
-                <span class="whyItem__num">03</span>
-                <div>
-                  <h3>Souplesse</h3>
-                  <p>Transport, enlèvement, levage et demandes spécifiques : chaque intervention s’adapte au besoin réel.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="whyPanel whyPanel--benefits reveal">
-            <div class="benefitStack">
-              <div class="benefitCard">
-                <span class="benefitCard__label">Engagement</span>
-                <strong>Réponse rapide</strong>
-                <p>Un contact direct, simple et fluide pour ne pas perdre de temps.</p>
-              </div>
-
-              <div class="benefitCard">
-                <span class="benefitCard__label">Méthode</span>
-                <strong>Organisation chantier</strong>
-                <p>Une logique terrain pensée pour limiter la friction et sécuriser l’intervention.</p>
-              </div>
-
-              <div class="benefitCard">
-                <span class="benefitCard__label">Souplesse</span>
-                <strong>Demandes spécifiques</strong>
-                <p>Des solutions ajustées selon le besoin réel, même pour les cas moins standards.</p>
-              </div>
-            </div>
-          </div>
+          <article class="whyPremiumCard reveal">
+            <span class="whyPremiumCard__index">03</span>
+            <h3>Qualité de service visible</h3>
+            <p>Ponctualité, respect du site et suivi simple. L’objectif est de donner un rendu professionnel, même sur les missions courtes.</p>
+          </article>
         </div>
       </div>
     </section>
+
+    <div class="sectionDivider" aria-hidden="true"></div>
 
     <section class="section section--wide section--zone" id="zone">
       <div class="wideShell">
         <div class="wideHead reveal">
           <span class="sectionKicker">Zone</span>
           <div class="wideHead__body">
-            <h2 class="h2 wideTitle wideTitle--center">Une zone d’intervention claire, avec une organisation pensée pour aller vite.</h2>
+            <h2 class="h2 wideTitle wideTitle--center">Intervention locale maîtrisée, extension possible selon la mission.</h2>
             <div class="sectionSubtitleBar sectionSubtitleBar--center">
               <p class="wideLead wideLead--bar">
-                Tu peux personnaliser ici ton secteur, tes habitudes d’intervention et les informations utiles pour rassurer immédiatement le visiteur.
+                Nous privilégions une zone principale autour du Var pour rester réactifs, avec des déplacements élargis étudiés au cas par cas.
               </p>
             </div>
           </div>
         </div>
 
-        <div class="zoneWideGrid">
-          <article class="zoneWideCard reveal">
-            <div class="zoneWideCard__top">
-              <span class="zoneWideCard__pill">Secteur</span>
-            </div>
-            <h3>Zone d’intervention</h3>
-            <p>
-              À personnaliser selon ton activité : Var, Bouches-du-Rhône, PACA ou secteurs précis selon tes tournées.
-            </p>
-            <div class="zoneWideCard__placeholder">Carte / visuel de zone à ajouter</div>
-          </article>
+        <div class="zoneTimeline reveal">
+          <div class="zoneTimeline__step">
+            <span class="zoneTimeline__badge">Zone prioritaire</span>
+            <h3>Var & alentours proches</h3>
+            <p>Toulon, Hyères, La Garde, La Valette, Cuers et communes voisines pour les interventions les plus rapides.</p>
+          </div>
 
-          <article class="zoneWideCard reveal">
-            <div class="zoneWideCard__top">
-              <span class="zoneWideCard__pill">Organisation</span>
-            </div>
-            <h3>Disponibilités</h3>
-            <p>
-              Indique ici tes créneaux, délais de réponse, prise de rendez-vous ou modalités d’intervention.
-            </p>
-            <div class="zoneWideCard__placeholder">Informations de disponibilité à ajouter</div>
-          </article>
+          <div class="zoneTimeline__step">
+            <span class="zoneTimeline__badge">Zone élargie</span>
+            <h3>Selon volume et planning</h3>
+            <p>Déplacements hors secteur principal possibles selon la nature du transport, l’accès et la disponibilité.</p>
+          </div>
+
+          <div class="zoneTimeline__step">
+            <span class="zoneTimeline__badge">Validation</span>
+            <h3>Accord clair avant mission</h3>
+            <p>Chaque demande est validée avec un devis, un créneau et une confirmation du plan d’intervention.</p>
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="sectionDivider" aria-hidden="true"></div>
 
     <section class="section section--wide section--contactWide" id="contact">
       <div class="wideShell">
@@ -332,7 +298,7 @@
             </div>
 
             <div class="contactWideNote">
-              Zone texte libre : délais, infos chantier, modalités, secteur, disponibilités…
+              Envoyez votre besoin (adresse, type de charge, urgence). Nous revenons vers vous avec une proposition claire, sans perte de temps.
             </div>
           </div>
 
@@ -343,18 +309,18 @@
               <div class="contactFormMock__row">
                 <div class="contactFormMock__field">
                   <label>Nom</label>
-                  <div class="contactFormMock__input">—</div>
+                  <div class="contactFormMock__input">Votre nom</div>
                 </div>
 
                 <div class="contactFormMock__field">
                   <label>Téléphone</label>
-                  <div class="contactFormMock__input">—</div>
+                  <div class="contactFormMock__input">Votre téléphone</div>
                 </div>
               </div>
 
               <div class="contactFormMock__field">
                 <label>Besoin</label>
-                <div class="contactFormMock__textarea">Transport / enlèvement / levage…</div>
+                <div class="contactFormMock__textarea">Type de prestation, adresse d’intervention, volume, urgence…</div>
               </div>
 
               <div class="contactFormMock__actions">

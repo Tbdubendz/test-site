@@ -65,17 +65,34 @@ img{
   display:flex;
   justify-content: space-between;
   align-items:center;
-  gap: 26px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
-.topbar__left,
-.topbar__right{
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.brand__truck{
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(253,224,201,.16);
+  border: 1px solid rgba(253,224,201,.35);
+  padding: 5px;
+}
+
+.topbar__actions{
   display:flex;
   align-items:center;
   gap: 10px;
   flex-wrap: wrap;
 }
+
 
 .chip{
   display:inline-flex;
@@ -93,13 +110,11 @@ img{
 .chip__icon{ opacity: .9; }
 .chip--ghost{ background: rgba(0,0,0,.10); }
 
-/* ===== Nav cachée ===== */
-.nav{ display:none !important; }
 
 /* ===== Hero ===== */
 .hero{
   position: relative;
-  padding: 58px 0 38px;
+  padding: 34px 0 18px;
   overflow: hidden;
 }
 
@@ -122,17 +137,17 @@ img{
 .hero__inner{
   position: relative;
   display:grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-  gap: 68px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 44px;
   align-items:center;
-  min-height: 720px;
+  min-height: 390px;
 }
 
 .hero__content{
   position: relative;
   z-index: 2;
-  padding: 30px 0;
-  max-width: 760px;
+  padding: 12px 0;
+  max-width: 720px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,7 +268,7 @@ img{
   display:grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 16px;
-  max-width: 760px;
+  max-width: 720px;
 }
 
 .stat{
@@ -280,17 +295,17 @@ img{
 
 .hero__visual{
   position: relative;
-  min-height: 650px;
+  min-height: 390px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .hero__visual::before{
   content: "";
   position: absolute;
   width: min(1180px, 100%);
-  height: 520px;
+  height: 390px;
   right: -2%;
   top: 50%;
   transform: translateY(-50%);
@@ -306,12 +321,12 @@ img{
 .heroLogo{
   position: relative;
   z-index: 1;
-  width: min(1320px, 118%);
-  max-width: none;
+  width: min(760px, 100%);
+  max-height: 520px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 42px rgba(0,0,0,.20));
-  transform: translateX(2%);
+  transform: none;
 }
 
 .hero__fade{
@@ -628,7 +643,7 @@ img{
   bottom: auto;
   transform: none;
   width: fit-content;
-  max-width: min(100%, 380px);
+  max-width: min(100%, 460px);
   margin-top: auto;
   z-index: 6;
 }
@@ -637,7 +652,7 @@ img{
   position: relative;
   z-index: 6;
   overflow: hidden;
-  padding: 14px 16px 12px;
+  padding: 18px 20px 16px;
   border-radius: 22px;
   text-align: left;
   border: 1px solid rgba(255,255,255,.28);
@@ -708,7 +723,7 @@ img{
   color: rgba(255,255,255,.88);
   line-height: 1.5;
   font-size: 12px;
-  max-width: 28ch;
+  max-width: 40ch;
   position: relative;
   z-index: 1;
 }
@@ -719,154 +734,83 @@ img{
   padding: 82px 0;
 }
 
-.whyGrid,
-.zoneWideGrid,
+.whyPremiumGrid,
+.zoneTimeline,
 .contactWideGrid{
   position: relative;
   z-index: 2;
 }
 
-.whyGrid{
-  display: grid;
-  grid-template-columns: 1.08fr .92fr;
-  gap: 28px;
+.whyPremiumGrid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 22px;
 }
 
-.whyPanel{
-  border-radius: 34px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.10));
-  backdrop-filter: blur(14px);
-  box-shadow: 0 18px 44px rgba(0,0,0,.08);
+.whyPremiumCard{
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.12));
+  padding: 30px;
+  box-shadow: 0 18px 44px rgba(0,0,0,.10);
 }
 
-.whyPanel--text,
-.whyPanel--benefits{
-  padding: 32px;
+.whyPremiumCard__index{
+  display:inline-flex;
+  margin-bottom: 14px;
+  font-family: var(--display);
+  color: rgba(253,224,201,.95);
+  letter-spacing: 1px;
 }
 
-.whyList{
-  display: grid;
+.whyPremiumCard h3{
+  margin: 0 0 10px;
+  font-size: 26px;
+}
+
+.whyPremiumCard p{
+  margin: 0;
+  color: rgba(255,255,255,.82);
+  line-height: 1.78;
+}
+
+.zoneTimeline{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 20px;
 }
 
-.whyItem{
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 18px;
-  align-items: start;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(255,255,255,.08);
+.zoneTimeline__step{
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.12));
+  padding: 28px;
 }
 
-.whyItem:last-child{
-  border-bottom: 0;
-}
-
-.whyItem__num{
-  font-family: var(--display);
-  font-size: 24px;
-  color: rgba(253,224,201,.95);
-}
-
-.whyItem h3{
-  margin: 0 0 8px;
-  font-size: 24px;
-}
-
-.whyItem p{
-  margin: 0;
-  color: rgba(255,255,255,.82);
-  line-height: 1.82;
-}
-
-.benefitStack{
-  display: grid;
-  gap: 16px;
-}
-
-.benefitCard{
-  padding: 22px 22px;
-  border-radius: 24px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.05);
-}
-
-.benefitCard__label{
-  display: inline-block;
-  margin-bottom: 10px;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: rgba(253,224,201,.94);
-}
-
-.benefitCard strong{
-  display: block;
-  margin-bottom: 8px;
-  font-size: 22px;
-}
-
-.benefitCard p{
-  margin: 0;
-  color: rgba(255,255,255,.82);
-  line-height: 1.72;
-}
-
-.zoneWideGrid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 28px;
-}
-
-.zoneWideCard{
-  border-radius: 34px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.10));
-  backdrop-filter: blur(14px);
-  box-shadow: 0 18px 44px rgba(0,0,0,.08);
-  padding: 32px;
-}
-
-.zoneWideCard__top{
-  margin-bottom: 20px;
-}
-
-.zoneWideCard__pill{
+.zoneTimeline__badge{
   display: inline-flex;
-  padding: 10px 14px;
+  margin-bottom: 12px;
+  padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(253,224,201,.28);
+  border: 1px solid rgba(253,224,201,.34);
   background: rgba(253,224,201,.08);
   font-size: 11px;
-  font-weight: 800;
   letter-spacing: .8px;
   text-transform: uppercase;
+  font-weight: 800;
 }
 
-.zoneWideCard h3{
+.zoneTimeline h3{
   margin: 0 0 10px;
-  font-size: 30px;
+  font-size: 24px;
 }
 
-.zoneWideCard p{
-  margin: 0 0 24px;
+.zoneTimeline p{
+  margin: 0;
   color: rgba(255,255,255,.82);
-  line-height: 1.84;
+  line-height: 1.76;
 }
 
-.zoneWideCard__placeholder{
-  min-height: 240px;
-  border-radius: 22px;
-  border: 1px dashed rgba(255,255,255,.18);
-  background: rgba(255,255,255,.04);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: rgba(255,255,255,.70);
-  padding: 20px;
-}
 
 .contactWideGrid{
   display: grid;
@@ -974,6 +918,14 @@ img{
   flex-wrap: wrap;
 }
 
+.sectionDivider{
+  width: min(2250px, calc(100% - 92px));
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(253,224,201,.75), rgba(255,255,255,0));
+  opacity: .75;
+}
+
 /* ===== Footer ===== */
 .footer{
   margin-top: 30px;
@@ -1025,8 +977,8 @@ img{
 
 @media (max-width: 1280px){
   .servicesGrid--luxe,
-  .whyGrid,
-  .zoneWideGrid,
+  .whyPremiumGrid,
+  .zoneTimeline,
   .contactWideGrid{
     grid-template-columns: 1fr;
   }
@@ -1036,7 +988,7 @@ img{
   }
 
   .hero__inner{
-    min-height: 580px;
+    min-height: 460px;
   }
 
   .title{
@@ -1045,9 +997,23 @@ img{
 }
 
 @media (max-width: 980px){
+  .topbar__inner{
+    justify-content: center;
+  }
+
+  .topbar__actions{
+    justify-content: center;
+  }
+
+  .brand__truck{
+    width: 40px;
+    height: 40px;
+  }
+
   .hero{
     padding: 38px 0 22px;
   }
+
 
   .heroWide{
     width: min(100%, calc(100% - 32px));
@@ -1126,6 +1092,15 @@ img{
 }
 
 @media (max-width: 640px){
+  .chip{
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+  .brand__text{
+    font-size: 15px;
+  }
+
   .heroWide{
     width: calc(100% - 22px);
   }
@@ -1164,7 +1139,7 @@ img{
 
   .serviceCard__content{
     width: auto;
-    max-width: min(100%, 320px);
+    max-width: min(100%, 360px);
   }
 
   .serviceCard__content--glass{
@@ -1197,8 +1172,8 @@ img{
     white-space: normal;
   }
 
-  .whyPanel,
-  .zoneWideCard,
+  .whyPremiumCard,
+  .zoneTimeline__step,
   .contactWideCard{
     border-radius: 24px;
     padding: 22px;
@@ -1206,10 +1181,6 @@ img{
 
   .contactFormMock__row{
     grid-template-columns: 1fr;
-  }
-
-  .topbar__inner{
-    justify-content: center;
   }
 
   .footer__inner{
