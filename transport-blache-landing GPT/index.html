@@ -263,7 +263,7 @@
             <h2 class="h2 wideTitle wideTitle--center">Une zone d’intervention claire, avec une organisation pensée pour aller vite.</h2>
             <div class="sectionSubtitleBar sectionSubtitleBar--center">
               <p class="wideLead wideLead--bar">
-                Tu peux personnaliser ici ton secteur, tes habitudes d’intervention et les informations utiles pour rassurer immédiatement le visiteur.
+                Nous intervenons rapidement autour de Saint-Maximin-la-Sainte-Baume et sur les communes voisines, avec un planning adaptable selon l’urgence chantier.
               </p>
             </div>
           </div>
@@ -276,9 +276,11 @@
             </div>
             <h3>Zone d’intervention</h3>
             <p>
-              À personnaliser selon ton activité : Var, Bouches-du-Rhône, PACA ou secteurs précis selon tes tournées.
+              Var, Bouches-du-Rhône et secteurs limitrophes : nous validons chaque demande selon l’accès, la charge et les délais.
             </p>
-            <div class="zoneWideCard__placeholder">Carte / visuel de zone à ajouter</div>
+            <div class="zoneWideCard__placeholder">
+              Saint-Maximin-la-Sainte-Baume • Brignoles • Saint-Zacharie • Trets • Aix-en-Provence
+            </div>
           </article>
 
           <article class="zoneWideCard reveal">
@@ -287,9 +289,11 @@
             </div>
             <h3>Disponibilités</h3>
             <p>
-              Indique ici tes créneaux, délais de réponse, prise de rendez-vous ou modalités d’intervention.
+              Contact direct par téléphone ou email. Réponse rapide pour les demandes urgentes et planification de créneau selon vos contraintes.
             </p>
-            <div class="zoneWideCard__placeholder">Informations de disponibilité à ajouter</div>
+            <div class="zoneWideCard__placeholder">
+              Du lundi au samedi • Intervention chantier et particuliers • Devis gratuit
+            </div>
           </article>
         </div>
       </div>
@@ -332,36 +336,48 @@
             </div>
 
             <div class="contactWideNote">
-              Zone texte libre : délais, infos chantier, modalités, secteur, disponibilités…
+              Besoin d'un transport de matériaux, d'un enlèvement de gravats ou d'une opération de levage ?
+              Nous vous orientons rapidement vers la solution la plus adaptée.
             </div>
           </div>
 
           <div class="contactWideCard reveal">
             <div class="contactWideCard__label">Demande de devis</div>
 
-            <div class="contactFormMock">
+            <form class="contactFormMock" id="quoteForm">
               <div class="contactFormMock__row">
                 <div class="contactFormMock__field">
-                  <label>Nom</label>
-                  <div class="contactFormMock__input">—</div>
+                  <label for="name">Nom</label>
+                  <input id="name" name="name" class="contactFormMock__input" type="text" placeholder="Votre nom" required />
                 </div>
 
                 <div class="contactFormMock__field">
-                  <label>Téléphone</label>
-                  <div class="contactFormMock__input">—</div>
+                  <label for="phone">Téléphone</label>
+                  <input id="phone" name="phone" class="contactFormMock__input" type="tel" placeholder="06 xx xx xx xx" required />
                 </div>
               </div>
 
               <div class="contactFormMock__field">
-                <label>Besoin</label>
-                <div class="contactFormMock__textarea">Transport / enlèvement / levage…</div>
+                <label for="service">Type de besoin</label>
+                <select id="service" name="service" class="contactFormMock__input">
+                  <option value="Transport">Transport</option>
+                  <option value="Big bag / enlèvement">Big bag / enlèvement</option>
+                  <option value="Levage">Levage</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="contactFormMock__field">
+                <label for="details">Besoin</label>
+                <textarea id="details" name="details" class="contactFormMock__textarea" placeholder="Décrivez rapidement votre besoin (adresse, volume, délais...)." required></textarea>
               </div>
 
               <div class="contactFormMock__actions">
-                <a class="btn btn--primary" href="tel:+33675666829">Appeler →</a>
-                <a class="btn btn--glass" href="mailto:transportblache@gmail.com">Email →</a>
+                <button class="btn btn--primary" type="submit">Envoyer la demande →</button>
+                <a class="btn btn--glass" href="tel:+33675666829">Appeler →</a>
               </div>
-            </div>
+              <p class="formStatus" id="formStatus" aria-live="polite"></p>
+            </form>
           </div>
         </div>
       </div>
