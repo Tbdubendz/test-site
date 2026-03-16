@@ -93,8 +93,66 @@ img{
 .chip__icon{ opacity: .9; }
 .chip--ghost{ background: rgba(0,0,0,.10); }
 
-/* ===== Nav cachée ===== */
-.nav{ display:none !important; }
+/* ===== Nav ===== */
+.nav{
+  position: sticky;
+  top: 62px;
+  z-index: 55;
+  padding: 12px 0;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.10));
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.nav__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.brand__mark{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--cream);
+  box-shadow: 0 0 0 5px rgba(253,224,201,.15);
+}
+
+.nav__links{
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.08);
+}
+
+.nav__links a{
+  font-size: 14px;
+  font-weight: 600;
+  opacity: .92;
+}
+
+.nav__cta{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(253,224,201,.3);
+  background: rgba(253,224,201,.14);
+  font-weight: 700;
+}
+
 
 /* ===== Hero ===== */
 .hero{
@@ -856,17 +914,22 @@ img{
   line-height: 1.84;
 }
 
-.zoneWideCard__placeholder{
-  min-height: 240px;
-  border-radius: 22px;
-  border: 1px dashed rgba(255,255,255,.18);
-  background: rgba(255,255,255,.04);
+.zoneList{
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: grid;
-  place-items: center;
-  text-align: center;
-  color: rgba(255,255,255,.70);
-  padding: 20px;
+  gap: 10px;
 }
+
+.zoneList li{
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.05);
+  padding: 12px 14px;
+  color: rgba(255,255,255,.84);
+}
+
 
 .contactWideGrid{
   display: grid;
@@ -1047,6 +1110,23 @@ img{
 @media (max-width: 980px){
   .hero{
     padding: 38px 0 22px;
+  }
+
+  .nav{
+    top: auto;
+    position: relative;
+  }
+
+  .nav__inner{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav__links{
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .heroWide{
